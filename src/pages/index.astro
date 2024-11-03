@@ -1,0 +1,316 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="The Old Cottage - Lambley">
+  <main class="bg-cottage-100">
+    <!-- Hero Section - Full Height -->
+    <div class="relative h-screen">
+      <img 
+        src="src/images/20240810_145033.webp" 
+        class="w-full h-full object-cover"
+        alt="The Old Cottage exterior"
+      />
+      <div class="absolute inset-0 bg-black/40 flex items-center justify-center">
+        <div class="text-center max-w-7xl px-4">
+          <h1 class="text-6xl md:text-8xl font-bold text-white mb-8 font-serif">
+            The Old Cottage
+          </h1>
+          <p class="text-2xl md:text-3xl text-white/90 leading-relaxed">
+            A centuries old retreat in the North Pennines Area of Outstanding Natural Beauty
+          </p>
+        </div>
+      </div>
+    </div>
+
+<!-- Welcome Section -->
+<div class="max-w-7xl mx-auto px-4 py-24">
+	<div class="grid md:grid-cols-2 gap-16">
+	  <!-- Welcome Text -->
+	  <div class="prose prose-lg">
+		<h2 class="text-4xl font-serif mb-12">Welcome to The Old Cottage</h2>
+		<p class="text-xl text-gray-700 mb-6 leading-relaxed">
+		  Situated in the heart of the North Pennines, an Area of Outstanding Natural Beauty, this delightful hide-away promises an unforgettable stay.
+		</p>
+		<p class="text-xl text-gray-700 leading-relaxed">
+		  Don't miss the dramatic Lambley viaduct, which is only a five minute walk away.
+		</p>
+	  </div>
+  
+	  <!-- Amenities List -->
+	  <div class="bg-cottage-100 sm:ml-24 rounded-lg">
+		<ul class="space-y-6">
+		  <li class="flex items-start gap-4">
+			<svg viewBox="0 0 24 24" fill="none" class="h-6 w-6" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M2 6C2 5.44772 1.55228 5 1 5C0.447715 5 0 5.44772 0 6V18C0 18.5523 0.447715 19 1 19C1.55228 19 2 18.5523 2 18V16H22V18C22 18.5523 22.4477 19 23 19C23.5523 19 24 18.5523 24 18V10C24 7.79086 22.2091 6 20 6H13C11.8954 6 11 6.89543 11 8V14H2V6ZM22 10V14H13V8H20C21.1046 8 22 8.89543 22 10Z" fill="#0F0F0F"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M6.5 13C8.433 13 10 11.433 10 9.5C10 7.567 8.433 6 6.5 6C4.567 6 3 7.567 3 9.5C3 11.433 4.567 13 6.5 13ZM6.5 11.0799C5.62742 11.0799 4.92006 10.3726 4.92006 9.5C4.92006 8.62742 5.62742 7.92006 6.5 7.92006C7.37258 7.92006 8.07994 8.62742 8.07994 9.5C8.07994 10.3726 7.37258 11.0799 6.5 11.0799Z" fill="#0F0F0F"></path> </g></svg>
+			<div>
+			  <h4 class="font-semibold text-lg">Bedrooms</h4>
+			  <p class="text-gray-700">2 comfortable double bedrooms</p>
+			</div>
+		  </li>
+		  <li class="flex items-start gap-4">
+			<svg viewBox="0 0 512 512" class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill="var(--ci-primary-color, #000000)" d="M464,280H80V100A51.258,51.258,0,0,1,95.113,63.515l.4-.4a51.691,51.691,0,0,1,58.6-10.162,79.1,79.1,0,0,0,11.778,96.627l10.951,10.951-20.157,20.158,22.626,22.626,20.157-20.157h0L311.157,71.471h0l20.157-20.157L308.687,28.687,288.529,48.844,277.578,37.893a79.086,79.086,0,0,0-100.929-8.976A83.61,83.61,0,0,0,72.887,40.485l-.4.4A83.054,83.054,0,0,0,48,100V280H16v32H48v30.7a23.95,23.95,0,0,0,1.232,7.589L79,439.589A23.969,23.969,0,0,0,101.766,456h12.9L103,496h33.333L148,456H356.1l12,40H401.5l-12-40h20.73A23.969,23.969,0,0,0,433,439.589l29.766-89.3A23.982,23.982,0,0,0,464,342.7V312h32V280ZM188.52,60.52a47.025,47.025,0,0,1,66.431,0L265.9,71.471,199.471,137.9,188.52,126.951A47.027,47.027,0,0,1,188.52,60.52ZM432,341.4,404.468,424H107.532L80,341.4V312H432Z" class="ci-primary"></path> </g></svg>
+			<div>
+			  <h4 class="font-semibold text-lg">Bathrooms</h4>
+			  <p class="text-gray-700">2 bathrooms including ensuite</p>
+			</div>
+		  </li>
+		  <li class="flex items-start gap-4">
+			<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <defs> <style>.cls-1{fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.5px;}</style> </defs> <g id="ic-kitchen-microoven"> <rect class="cls-1" x="2" y="4" width="20" height="14" rx="2"></rect> <line class="cls-1" x1="6" y1="18" x2="6" y2="20"></line> <line class="cls-1" x1="18" y1="18" x2="18" y2="20"></line> <line class="cls-1" x1="15" y1="4" x2="15" y2="18"></line> <circle class="cls-1" cx="18.5" cy="7.5" r="1.5"></circle> <circle class="cls-1" cx="18.5" cy="12.5" r="1.5"></circle> </g> </g></svg>
+			<div>
+			  <h4 class="font-semibold text-lg">Kitchen/Dining Room</h4>
+			  <p class="text-gray-700">Electric Cooker, Microwave, Fridge/Freezer, Dishwasher</p>
+			</div>
+		  </li>
+		  <li class="flex items-start gap-4">
+			<svg viewBox="0 0 24 24" fill="none" class="h-6 w-6" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M3 10C3 6.22876 3 4.34315 4.17157 3.17157C5.34315 2 7.22876 2 11 2H13C16.7712 2 18.6569 2 19.8284 3.17157C21 4.34315 21 6.22876 21 10V14C21 17.7712 21 19.6569 19.8284 20.8284C18.6569 22 16.7712 22 13 22H11C7.22876 22 5.34315 22 4.17157 20.8284C3 19.6569 3 17.7712 3 14V10Z" stroke="#1C274C" stroke-width="1.5"></path> <path d="M17 14C17 16.7614 14.7614 19 12 19C9.23858 19 7 16.7614 7 14C7 11.2386 9.23858 9 12 9C14.7614 9 17 11.2386 17 14Z" stroke="#1C274C" stroke-width="1.5"></path> <path d="M8 6H16" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"></path> <path d="M7.23418 14.3624C8.08868 14.7895 9.06745 15.5209 10.724 15.8195C13.0859 16.2453 12.8501 14.1706 15.2121 14.5961C15.9323 14.7258 16.4181 14.9452 16.7616 15.1805" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"></path> </g></svg>
+			<div>
+			  <h4 class="font-semibold text-lg">Utility Room</h4>
+			  <p class="text-gray-700">Washing machine & tumble dryer</p>
+			</div>
+		  </li>
+		  <li class="flex items-start gap-4">
+			<svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M12.0002 19C11.4479 19 11.0002 19.4477 11.0002 20C11.0002 20.5523 11.4479 21 12.0002 21V19ZM12.0102 21C12.5625 21 13.0102 20.5523 13.0102 20C13.0102 19.4477 12.5625 19 12.0102 19V21ZM14.6907 17.04C15.0993 17.4116 15.7317 17.3817 16.1033 16.9732C16.475 16.5646 16.445 15.9322 16.0365 15.5605L14.6907 17.04ZM18.0541 13.3403C18.4626 13.7119 19.0951 13.682 19.4667 13.2734C19.8384 12.8649 19.8084 12.2324 19.3999 11.8608L18.0541 13.3403ZM7.96394 15.5605C7.55539 15.9322 7.52546 16.5646 7.89708 16.9732C8.26871 17.3817 8.90117 17.4116 9.30971 17.04L7.96394 15.5605ZM4.60055 11.8608C4.192 12.2324 4.16207 12.8649 4.53369 13.2734C4.90532 13.682 5.53778 13.7119 5.94633 13.3403L4.60055 11.8608ZM12.0002 21H12.0102V19H12.0002V21ZM12.0002 16C13.0369 16 13.9795 16.3931 14.6907 17.04L16.0365 15.5605C14.9715 14.5918 13.5538 14 12.0002 14V16ZM12.0002 11C14.3321 11 16.4548 11.8855 18.0541 13.3403L19.3999 11.8608C17.4468 10.0842 14.8489 9 12.0002 9V11ZM9.30971 17.04C10.0209 16.3931 10.9635 16 12.0002 16V14C10.4466 14 9.02893 14.5918 7.96394 15.5605L9.30971 17.04ZM5.94633 13.3403C7.54565 11.8855 9.66836 11 12.0002 11V9C9.15148 9 6.55365 10.0842 4.60055 11.8608L5.94633 13.3403Z" fill="#000000"></path> </g></svg>
+			<div>
+			  <h4 class="font-semibold text-lg">Wifi</h4>
+			  <p class="text-gray-700">Wifi and TV available</p>
+			</div>
+		  </li>
+		  <li class="flex items-start gap-4">
+			<svg version="1.1" id="_x32_" class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <style type="text/css">  .st0{fill:#000000;}  </style> <g> <path class="st0" d="M486.965,230.141c28.063-31.641,12.375-71.844,10.453-76.781s-5.25-2.859-6.984-0.25 c-1.766,2.609-40.172,50.484-40.172,50.484H248.403c0,0-103.719-148.453-107.297-153.672s-6.328-5.797-8.797-5.797 c-2.484,0-6.344,0.828-6.344,7.984c0,4.688,0,78.953,0,78.953s-101.25,58.375-115.844,66.328 c-14.547,7.984-10.172,17.891-6.578,25.578c3.156,6.828,44,94.109,45.109,96.594c1.094,2.469,3.844,2.469,4.688,0.813 c0.813-1.656,11.547-16.516,13.469-19.813c1.922-3.281,4.406-2.469,6.063-1.078c1.047,0.859,7.156,4.953,9.625,6.859 c2.484,1.938,5.219,0,6.047-1.391c0.844-1.359,13.484-20.344,14.859-22.547s3.297-1.078,4.141-0.531 c0.813,0.531,5.5,5.219,8.797,8.516c3.297,3.031,4.406,1.922,6.875-1.375c0.984-1.281,9.922-14.844,11.844-16.781 c1.906-1.922,3.281-0.828,4.672,1.094c1.375,1.938,14.313,22.031,18.984,29.438c4.672,7.453,4.125,10.734,4.125,13.484 s-13.766,151.625-13.766,151.625h93l15.688-104.031c0,0,95.203,0,101.813,0c6.594,0,20.906,2.203,35.219,16.25 c14.313,14.016,26.125,87.219,26.125,87.219h91.078L486.965,230.141z"></path> </g> </g></svg>
+			<div>
+			  <h4 class="font-semibold text-lg">Dog friendly</h4>
+			  <p class="text-gray-700">Dog bed and dog treats provided</p>
+			</div>
+		  </li>
+		  <li class="flex items-start gap-4">
+			<svg viewBox="0 0 24 24" fill="none" class="h-6 w-6" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M10.0284 1.11813C9.69728 1.2952 9.53443 1.61638 9.49957 1.97965C9.48456 2.15538 9.46201 2.32986 9.43136 2.50363C9.3663 2.87248 9.24303 3.3937 9.01205 3.98313C8.5513 5.15891 7.67023 6.58926 5.96985 7.65195C3.57358 9.14956 2.68473 12.5146 3.06456 15.527C3.45234 18.6026 5.20871 21.7903 8.68375 22.9486C9.03 23.0641 9.41163 22.9817 9.67942 22.7337C10.0071 22.4303 10.0238 22.0282 9.94052 21.6223C9.87941 21.3244 9.74999 20.5785 9.74999 19.6875C9.74999 19.3992 9.76332 19.1034 9.79413 18.8068C10.3282 20.031 11.0522 20.9238 11.7758 21.5623C12.8522 22.5121 13.8694 22.8574 14.1722 22.9466C14.402 23.0143 14.6462 23.0185 14.8712 22.9284C17.5283 21.8656 19.2011 20.4232 20.1356 18.7742C21.068 17.1288 21.1993 15.3939 20.9907 13.8648C20.7833 12.3436 20.2354 10.9849 19.7537 10.0215C19.3894 9.29292 19.0534 8.77091 18.8992 8.54242C18.7101 8.26241 18.4637 8.04626 18.1128 8.00636C17.8332 7.97456 17.5531 8.06207 17.3413 8.24739L15.7763 9.61686C15.9107 7.44482 15.1466 5.61996 14.1982 4.24472C13.5095 3.24609 12.7237 2.47913 12.1151 1.96354C11.8094 1.70448 11.5443 1.50549 11.3525 1.36923C11.2564 1.30103 11.1784 1.24831 11.1224 1.21142C10.7908 0.99291 10.3931 0.923125 10.0284 1.11813ZM7.76396 20.256C7.75511 20.0744 7.74999 19.8842 7.74999 19.6875C7.75 18.6347 7.89677 17.3059 8.47802 16.0708C8.67271 15.6572 8.91614 15.254 9.21914 14.8753C9.47408 14.5566 9.89709 14.4248 10.2879 14.5423C10.6787 14.6598 10.959 15.003 10.9959 15.4094C11.2221 17.8977 12.2225 19.2892 13.099 20.0626C13.5469 20.4579 13.979 20.7056 14.292 20.8525C15.5 20.9999 17.8849 18.6892 18.3955 17.7882C19.0569 16.6211 19.1756 15.356 19.0091 14.1351C18.8146 12.7092 18.2304 11.3897 17.7656 10.5337L14.6585 13.2525C14.3033 13.5634 13.779 13.5835 13.401 13.3008C13.023 13.018 12.8942 12.5095 13.092 12.0809C14.4081 9.22933 13.655 6.97987 12.5518 5.38019C12.1138 4.74521 11.6209 4.21649 11.18 3.80695C11.0999 4.088 10.9997 4.39262 10.8742 4.71284C10.696 5.16755 10.4662 5.65531 10.1704 6.15187C9.50801 7.26379 8.51483 8.41987 7.02982 9.34797C5.57752 10.2556 4.71646 12.6406 5.04885 15.2768C5.29944 17.2643 6.20241 19.1244 7.76396 20.256Z" fill="#0F0F0F"></path> </g></svg>
+			<div>
+			  <h4 class="font-semibold text-lg">Woodburning stove</h4>
+			  <p class="text-gray-700">Logs and kindling provided</p>
+			</div>
+		  </li>
+		  <li class="flex items-start gap-4">
+			<svg fill="#000000" viewBox="0 0 24 24" class="w-6 h-6" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M20.492,10.04a8.987,8.987,0,0,0-6.376-5.788A1.583,1.583,0,0,1,15,4a1,1,0,0,0,0-2,3.541,3.541,0,0,0-3.27,2.011A8.979,8.979,0,0,0,3.508,10.04a3,3,0,0,0,0,5.92,8.99,8.99,0,0,0,16.984,0,3,3,0,0,0,0-5.92ZM20.007,14l-.137-.018a1.007,1.007,0,0,0-1.1.747,6.99,6.99,0,0,1-13.55,0,1,1,0,0,0-.968-.754c-.042,0-.084,0-.127.007L4,14a1,1,0,0,1-.008-2l.133.017a1,1,0,0,0,1.1-.745,6.976,6.976,0,0,1,5.847-5.194A6.581,6.581,0,0,0,11,7a1,1,0,0,0,1,1h0a1,1,0,0,0,1-1,5.492,5.492,0,0,1,.1-.91,6.982,6.982,0,0,1,5.676,5.179,1,1,0,0,0,1.1.745L20.006,12a1,1,0,0,1,0,2ZM10.5,13A1.5,1.5,0,1,1,9,11.5,1.5,1.5,0,0,1,10.5,13Zm6,0A1.5,1.5,0,1,1,15,11.5,1.5,1.5,0,0,1,16.5,13Z"></path></g></svg>
+			<div>
+			  <h4 class="font-semibold text-lg">Children welcome</h4>
+			  <p class="text-gray-700">Highchair, travel cot and stair gates available</p>
+			</div>
+		  </li>
+		</ul>
+	  </div>
+	</div>
+  </div>
+
+    <!-- Full Width Image -->
+    <div class="h-[80vh] w-full relative overflow-hidden">
+      <img 
+        src="src/images/Living2.jpg" 
+        alt="Northumberland landscape"
+        class="w-full h-full object-cover"
+      />
+    </div>
+
+
+<!-- Image Mosaic -->
+<div class="max-w-7xl mx-auto px-4 py-16">
+	<div class="grid grid-cols-1 md:grid-cols-2 gap-2">
+	  <div class="grid gap-2">
+		<div class="aspect-[4/3]">
+		  <img 
+			class="h-full w-full rounded-lg transition duration-300 hover:opacity-90 object-cover" 
+			src="src/images/20240627_144038.webp" 
+			alt="Cottage interior"
+		  />
+		</div>
+		<div class="aspect-[4/3]">
+		  <img 
+			class="h-full w-full rounded-lg transition duration-300 hover:opacity-90 object-cover" 
+			src="src/images/bed2.jpg" 
+			alt="Living room"
+		  />
+		</div>
+	  </div>
+	  <div class="grid gap-2">
+		<div class="aspect-[4/3]">
+		  <img 
+			class="h-full w-full rounded-lg transition duration-300 hover:opacity-90 object-cover" 
+			src="src/images/20241024_141846.webp" 
+			alt="Exterior"
+		  />
+		</div>
+		<div class="aspect-[4/3]">
+		  <img 
+			class="h-full w-full rounded-lg transition duration-300 hover:opacity-90 object-cover" 
+			src="src/images/20240805_110032.webp" 
+			alt="Garden view"
+		  />
+		</div>
+	  </div>
+	</div>
+  </div>
+    <!-- Key Information Sections with Large Images -->
+    <div class="max-w-7xl mx-auto py-24">
+      <!-- Pets Section -->
+      <div class="grid md:grid-cols-2 gap-16 items-center mb-24 px-4">
+        <div class="order-2 md:order-1">
+          <h2 class="text-4xl font-serif mb-8">2 Bedrooms</h2>
+          <div class="prose prose-lg text-slate-600">
+            <p>The Old Cottage features two inviting double bedrooms on the first floor, each offering picturesque views of the village church. The master bedroom includes an ensuite shower room, providing added privacy and convenience. The second bedroom shares the same delightful views, ensuring a serene start to each day. </p>
+          </div>
+        </div>
+        <div class="order-1 md:order-2 h-[600px]">
+          <img 
+            src="src/images/bed1.jpg" 
+            alt="Cottage garden"
+            class="w-full h-full object-cover rounded-lg"
+          />
+        </div>
+      </div>
+
+
+	  <div class="grid grid-cols-2 gap-2 py-24">
+		<div class="aspect-[4/3]">
+		  <img 
+			class="h-full w-full rounded-lg transition duration-300 hover:opacity-90 object-cover" 
+			src="src/images/outside.jpg" 
+			alt="Dining area"
+		  />
+		</div>
+		<div class="aspect-[4/3]">
+		  <img 
+			class="h-full w-full rounded-lg transition duration-300 hover:opacity-90 object-cover" 
+			src="src/images/20240822_111740.webp" 
+			alt="Surroundings"
+		  />
+		</div>
+	  </div>
+
+      <!-- Kitchen Section -->
+      <div class="grid md:grid-cols-2 gap-16 items-center mb-24 px-4">
+        <div class="h-[600px]">
+          <img 
+            src="src/images/kitchen.jpg" 
+            alt="Cottage kitchen"
+            class="w-full h-full object-cover rounded-lg"
+          />
+        </div>
+        <div>
+          <h2 class="text-4xl font-serif mb-8">Kitchen Facilities</h2>
+          <div class="prose prose-lg text-slate-600">
+            <p>The ground floor boasts a well-equipped kitchen/diner with all modern appliances, including a dishwasher, making meal preparation a breeze.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Full Width Image Break -->
+    <div class="h-[80vh] w-full relative overflow-hidden mb-24">
+      <img 
+        src="src/images/livingArea.jpg" 
+        alt="Evening at the cottage"
+        class="w-full h-full object-cover"
+      />
+    </div>
+
+    <!-- Heating Section with Side Image -->
+    <div class="max-w-7xl mx-auto px-4 mb-24">
+      <div class="grid md:grid-cols-2 gap-16 items-center">
+        <div>
+          <h2 class="text-4xl font-serif mb-8">Lambley</h2>
+          <div class="prose prose-lg text-gray-600 text-light">
+            <p>Lambley is a charming village with a lot to offer. Begin your day with a visit to the beautiful village church, located just across the road from The Old Cottage. For outdoor enthusiasts, the North Pennines is a paradise for hiking, cycling, and birdwatching. Explore the numerous trails that wind through the breathtaking landscape, or take a stroll along the River South Tyne.</p>
+			<br>
+			<p>A short drive away, you’ll find the bustling market town of Hexham, known for its historic abbey, charming shops, and vibrant weekly market. For a taste of local history, visit Hadrian’s Wall, a UNESCO World Heritage site, and marvel at the ancient Roman fortifications. Whether you’re seeking adventure or relaxation, The Old Cottage in Lambley offers the perfect base for your next holiday. Book your stay today and experience the beauty and tranquillity of this enchanting region.</p>
+		</div>
+        </div>
+        <div class="h-[600px]">
+          <img 
+            src="src/images/20241024_141846.webp" 
+            alt="Log burner"
+            class="w-full h-full object-cover rounded-lg"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- Local Services with Visual Design -->
+    <!-- <div class="bg-stone-50 py-24">
+      <div class="max-w-7xl mx-auto px-4">
+        <h2 class="text-4xl font-serif mb-12">Local Services & Amenities</h2>
+        <div class="grid md:grid-cols-2 gap-16">
+          <div class="space-y-4 divide-y divide-gray-200">
+            <h3 class="text-2xl font-serif mb-6">Medical Services</h3>
+            <ul class="space-y-6">
+              <li>
+                <strong class="block text-lg mb-1 mt-8">Doctor</strong>
+                <p>Haltwhistle Medical Group<br>01434320077</p>
+              </li>
+              <li>
+                <strong class="block text-lg mb-1">Dentist</strong>
+                <p>Haltwhistle Dental Health<br>01434322300</p>
+              </li>
+              <li>
+                <strong class="block text-lg mb-1">A&E</strong>
+                <p>Cumberland Infirmary, Carlisle</p>
+              </li>
+            </ul>
+          </div>
+          <div class="space-y-4 divide-y divide-gray-200">
+            <h3 class="text-2xl font-serif mb-6">Transport & Essentials</h3>
+            <ul class="space-y-6">
+              <li>
+                <strong class="block text-lg mb-1 mt-8">Taxi</strong>
+                <p>Sproul Taxis: 07712321064</p>
+              </li>
+              <li>
+                <strong class="block text-lg mb-1">Bus Service</strong>
+                <p>681 service to Haltwhistle/Alston</p>
+              </li>
+              <li>
+                <strong class="block text-lg mb-1">Shopping</strong>
+                <p>Supermarket in Haltwhistle<br>All major supermarkets in Hexham</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+	 -->
+	
+	 <section class="bg-slate-900" id="contact">
+		<div class="max-w-7xl mx-auto px-4 py-16">
+		  <div class="grid md:grid-cols-2 gap-16 items-center">
+			<!-- Contact Form -->
+			<div>
+			  <h2 class="text-4xl text-white font-serif mb-8">Contact Us</h2>
+			  <p class="mb-8 text-gray-300">Got a question about your stay? Want to check availability? Get in touch and we'll get back to you as soon as possible.</p>
+			  <form action="#" class="space-y-6">
+				<div>
+				  <label for="email" class="block mb-2 text-sm font-medium text-gray-200">Your email</label>
+				  <input type="email" id="email" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5" placeholder="name@example.com" required>
+				</div>
+				<div>
+				  <label for="subject" class="block mb-2 text-sm font-medium text-gray-200">Subject</label>
+				  <input type="text" id="subject" class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm" placeholder="Let us know how we can help you" required>
+				</div>
+				<div>
+				  <label for="message" class="block mb-2 text-sm font-medium text-gray-200">Your message</label>
+				  <textarea id="message" rows="6" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300" placeholder="Leave a comment..."></textarea>
+				</div>
+				<button type="submit" class="py-3 px-5 text-sm font-medium text-white rounded-lg bg-yellow-700 hover:bg-primary-800">Enquire about availability</button>
+			  </form>
+			</div>
+			
+			<!-- Image -->
+			<div class="h-[600px]">
+			  <img 
+				src="src/images/Lounge.jpg" 
+				alt="The Old Cottage"
+				class="w-full h-full object-cover rounded-lg"
+			  />
+			</div>
+		  </div>
+		</div>
+	  </section>
+  </main>
+</Layout>
