@@ -1,9 +1,5 @@
 ---
 import Layout from '../layouts/Layout.astro';
-const apiKey = import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY;
-if (!apiKey) {
-  console.error('Google Maps API key is not defined');
-}
 ---
 
 
@@ -173,7 +169,7 @@ if (!apiKey) {
       </div>
 
 
-	  <div class="grid grid-cols-2 gap-2 py-24">
+	  <div class="grid grid-cols-1 sm:grid-cols-2 px-4 gap-2 py-24">
 		<div class="aspect-[4/3]">
 		  <img 
 			class="h-full w-full rounded-lg transition duration-300 hover:opacity-90 object-cover" 
@@ -306,11 +302,11 @@ if (!apiKey) {
 				  </div>
 				  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
 					<div>
-					  <label for="checkIn" class="block mb-2 text-sm font-medium text-gray-200">Check-in date</label>
+					  <label for="checkIn" class="block mb-2 text-sm font-medium text-gray-200">Preferred check-in date</label>
 					  <input type="date" name="checkIn" id="checkIn" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg w-full p-2.5" required>
 					</div>
 					<div>
-					  <label for="checkOut" class="block mb-2 text-sm font-medium text-gray-200">Check-out date</label>
+					  <label for="checkOut" class="block mb-2 text-sm font-medium text-gray-200">Preferred check-out date</label>
 					  <input type="date" name="checkOut" id="checkOut" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg w-full p-2.5" required>
 					</div>
 				  </div>
@@ -328,24 +324,15 @@ if (!apiKey) {
 					<label for="message" class="block mb-2 text-sm font-medium text-gray-200">Additional information</label>
 					<textarea name="message" id="message" rows="4" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg w-full p-2.5" placeholder="Any special requirements or questions..."></textarea>
 				  </div>
-				  <button type="submit" class="py-3 px-5 text-sm font-medium text-white rounded-lg bg-yellow-700 hover:bg-yellow-800 transition-colors">Check Availability</button>
+				  <button type="submit" class="py-3 px-5 text-sm font-medium text-white rounded-lg bg-yellow-700 hover:bg-yellow-800 transition-colors">Inquire about availability</button>
 				</form>
 				<div id="successMessage" class="hidden mt-4 p-4 rounded-lg bg-green-100 text-green-700">
 				  Thank you for your enquiry. We'll get back to you as soon as possible!
 				</div>
 			  </div>
 			
-			<!-- Image -->
-			<div class="h-[600px]">
-				<iframe
-				width="600"
-				height="100%"
-				style="border:0"
-				loading="lazy"
-				allowfullscreen
-				referrerpolicy="no-referrer-when-downgrade"
-				src={`https://www.google.com/maps/embed/v1/place?key=${apiKey || ''}&q=Lambley, Northumberland&zoom=13`}>
-			</iframe>
+			<!-- Map -->
+			<div id="map" class="w-full h-full rounded-lg"></div>
 			</div>
 		  </div>
 		</div>
@@ -382,6 +369,34 @@ if (!apiKey) {
 		}
 	  });
 	}
+  </script>
+
+
+<!-- Add this before the closing </Layout> tag -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+  crossorigin=""
+/>
+<script is:inline src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+  integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+  crossorigin="">
+</script>
+
+<script is:inline>
+	// Initialize the map
+	const map = L.map('map').setView([54.92148363518623, -2.5126935906702603], 13); // Coordinates for Lambley
+  
+	// Add OpenStreetMap tiles
+	L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+	  maxZoom: 19,
+	  attribution: '© OpenStreetMap contributors'
+	}).addTo(map);
+  
+	// Add a marker for The Old Cottage
+	L.marker([54.92148363518623, -2.5126935906702603])
+	  .addTo(map)
+	  .bindPopup('The Old Cottage, Lambley')
+	  .openPopup();
   </script>
 
 
