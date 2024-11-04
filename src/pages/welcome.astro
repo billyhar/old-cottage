@@ -1,0 +1,149 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Welcome Guide - The Old Cottage">
+  <main class="bg-cottage-100">
+    <!-- Hero Section -->
+    <div class="relative h-[70vh]">
+      <img 
+        src="Living2.jpg" 
+        class="w-full h-full object-cover"
+        alt="The Old Cottage interior"
+      />
+      <div class="absolute inset-0 bg-black/40 flex items-center justify-center">
+        <div class="text-center">
+          <h1 class="text-5xl md:text-6xl font-bold text-white mb-4 font-serif">
+            Welcome Guide
+          </h1>
+          <p class="text-xl text-white/90">
+            Everything you need to know for your stay
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="max-w-4xl mx-auto px-4 py-16">
+      <!-- Welcome Section -->
+      <div class="prose prose-lg max-w-none mb-16">
+        <h2 class="text-4xl font-serif mb-6">Welcome to the Old Cottage</h2>
+        <p>
+          We believe the cottage has been here for over 500 years! We hope you enjoy soaking up the history and beauty of this wonderful part of Northumberland. Lambley is in a designated Area of Outstanding Natural Beauty, yours to explore on foot or by bike or car.
+        </p>
+        <p>
+          Whether your stay is relaxed or energetic, and whether you enjoy the secluded patio sun trap in summer or the cosy log burner in winter, we do hope that we have provided all that you need in the old cottage.
+        </p>
+      </div>
+
+      <!-- Key Information Grid -->
+      <div class="grid md:grid-cols-2 gap-8">
+        <!-- Parking Section -->
+        <div class="bg-white p-8 rounded-lg shadow-sm">
+            <svg viewBox="0 0 24 24" class="h-8 w-8 mb-4" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M8 17H16M8 17C8 18.1046 7.10457 19 6 19C4.89543 19 4 18.1046 4 17M8 17C8 15.8954 7.10457 15 6 15C4.89543 15 4 15.8954 4 17M16 17C16 18.1046 16.8954 19 18 19C19.1046 19 20 18.1046 20 17M16 17C16 15.8954 16.8954 15 18 15C19.1046 15 20 15.8954 20 17M10 5V11M4 11L4.33152 9.01088C4.56901 7.58593 4.68776 6.87345 5.0433 6.3388C5.35671 5.8675 5.79705 5.49447 6.31346 5.26281C6.8993 5 7.6216 5 9.06621 5H12.4311C13.3703 5 13.8399 5 14.2662 5.12945C14.6436 5.24406 14.9946 5.43194 15.2993 5.68236C15.6435 5.96523 15.904 6.35597 16.425 7.13744L19 11M4 17H3.6C3.03995 17 2.75992 17 2.54601 16.891C2.35785 16.7951 2.20487 16.6422 2.10899 16.454C2 16.2401 2 15.9601 2 15.4V14.2C2 13.0799 2 12.5198 2.21799 12.092C2.40973 11.7157 2.71569 11.4097 3.09202 11.218C3.51984 11 4.0799 11 5.2 11H17.2C17.9432 11 18.3148 11 18.6257 11.0492C20.3373 11.3203 21.6797 12.6627 21.9508 14.3743C22 14.6852 22 15.0568 22 15.8C22 15.9858 22 16.0787 21.9877 16.1564C21.9199 16.5843 21.5843 16.9199 21.1564 16.9877C21.0787 17 20.9858 17 20.8 17H20" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+          <h3 class="text-2xl font-serif mb-4">Parking</h3>
+          <p class="text-gray-700">
+            It is best to park on the opposite side of the road from the cottage, but not in the church drive. If there is no space we suggest unloading your car outside the cottage then parking it a little way up the hill opposite the village hall.
+          </p>
+        </div>
+
+        <!-- Pets Section -->
+        <div class="bg-white p-8 rounded-lg shadow-sm">
+            <svg version="1.1" id="_x32_" class="h-8 w-8 mb-4" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <style type="text/css">  .st0{fill:#000000;}  </style> <g> <path class="st0" d="M486.965,230.141c28.063-31.641,12.375-71.844,10.453-76.781s-5.25-2.859-6.984-0.25 c-1.766,2.609-40.172,50.484-40.172,50.484H248.403c0,0-103.719-148.453-107.297-153.672s-6.328-5.797-8.797-5.797 c-2.484,0-6.344,0.828-6.344,7.984c0,4.688,0,78.953,0,78.953s-101.25,58.375-115.844,66.328 c-14.547,7.984-10.172,17.891-6.578,25.578c3.156,6.828,44,94.109,45.109,96.594c1.094,2.469,3.844,2.469,4.688,0.813 c0.813-1.656,11.547-16.516,13.469-19.813c1.922-3.281,4.406-2.469,6.063-1.078c1.047,0.859,7.156,4.953,9.625,6.859 c2.484,1.938,5.219,0,6.047-1.391c0.844-1.359,13.484-20.344,14.859-22.547s3.297-1.078,4.141-0.531 c0.813,0.531,5.5,5.219,8.797,8.516c3.297,3.031,4.406,1.922,6.875-1.375c0.984-1.281,9.922-14.844,11.844-16.781 c1.906-1.922,3.281-0.828,4.672,1.094c1.375,1.938,14.313,22.031,18.984,29.438c4.672,7.453,4.125,10.734,4.125,13.484 s-13.766,151.625-13.766,151.625h93l15.688-104.031c0,0,95.203,0,101.813,0c6.594,0,20.906,2.203,35.219,16.25 c14.313,14.016,26.125,87.219,26.125,87.219h91.078L486.965,230.141z"></path> </g> </g></svg>
+          <h3 class="text-2xl font-serif mb-4">Pets</h3>
+          <p class="text-gray-700">
+            We welcome dogs but ask that they are kept downstairs and that you use the stair gate provided to ensure we keep the upstairs rooms animal free. We have provided a dog towel, bed and bowl so that your four-legged friend is as well catered for as we hope you are.
+          </p>
+        </div>
+      </div>
+
+      <!-- Heating and Log Burner -->
+      <div class="bg-white p-8 rounded-lg shadow-sm mt-8">
+        <svg viewBox="0 0 24 24" fill="none" class="h-8 w-8 mb-4" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M10.0284 1.11813C9.69728 1.2952 9.53443 1.61638 9.49957 1.97965C9.48456 2.15538 9.46201 2.32986 9.43136 2.50363C9.3663 2.87248 9.24303 3.3937 9.01205 3.98313C8.5513 5.15891 7.67023 6.58926 5.96985 7.65195C3.57358 9.14956 2.68473 12.5146 3.06456 15.527C3.45234 18.6026 5.20871 21.7903 8.68375 22.9486C9.03 23.0641 9.41163 22.9817 9.67942 22.7337C10.0071 22.4303 10.0238 22.0282 9.94052 21.6223C9.87941 21.3244 9.74999 20.5785 9.74999 19.6875C9.74999 19.3992 9.76332 19.1034 9.79413 18.8068C10.3282 20.031 11.0522 20.9238 11.7758 21.5623C12.8522 22.5121 13.8694 22.8574 14.1722 22.9466C14.402 23.0143 14.6462 23.0185 14.8712 22.9284C17.5283 21.8656 19.2011 20.4232 20.1356 18.7742C21.068 17.1288 21.1993 15.3939 20.9907 13.8648C20.7833 12.3436 20.2354 10.9849 19.7537 10.0215C19.3894 9.29292 19.0534 8.77091 18.8992 8.54242C18.7101 8.26241 18.4637 8.04626 18.1128 8.00636C17.8332 7.97456 17.5531 8.06207 17.3413 8.24739L15.7763 9.61686C15.9107 7.44482 15.1466 5.61996 14.1982 4.24472C13.5095 3.24609 12.7237 2.47913 12.1151 1.96354C11.8094 1.70448 11.5443 1.50549 11.3525 1.36923C11.2564 1.30103 11.1784 1.24831 11.1224 1.21142C10.7908 0.99291 10.3931 0.923125 10.0284 1.11813ZM7.76396 20.256C7.75511 20.0744 7.74999 19.8842 7.74999 19.6875C7.75 18.6347 7.89677 17.3059 8.47802 16.0708C8.67271 15.6572 8.91614 15.254 9.21914 14.8753C9.47408 14.5566 9.89709 14.4248 10.2879 14.5423C10.6787 14.6598 10.959 15.003 10.9959 15.4094C11.2221 17.8977 12.2225 19.2892 13.099 20.0626C13.5469 20.4579 13.979 20.7056 14.292 20.8525C15.5 20.9999 17.8849 18.6892 18.3955 17.7882C19.0569 16.6211 19.1756 15.356 19.0091 14.1351C18.8146 12.7092 18.2304 11.3897 17.7656 10.5337L14.6585 13.2525C14.3033 13.5634 13.779 13.5835 13.401 13.3008C13.023 13.018 12.8942 12.5095 13.092 12.0809C14.4081 9.22933 13.655 6.97987 12.5518 5.38019C12.1138 4.74521 11.6209 4.21649 11.18 3.80695C11.0999 4.088 10.9997 4.39262 10.8742 4.71284C10.696 5.16755 10.4662 5.65531 10.1704 6.15187C9.50801 7.26379 8.51483 8.41987 7.02982 9.34797C5.57752 10.2556 4.71646 12.6406 5.04885 15.2768C5.29944 17.2643 6.20241 19.1244 7.76396 20.256Z" fill="#0F0F0F"></path> </g></svg>
+        <h3 class="text-2xl font-serif mb-4">Heating and the Log Burner</h3>
+        <div class="space-y-4 text-gray-700">
+          <p>The central heating should keep the cottage cosy. To raise and lower the temperature temporarily use the arrow buttons on the thermostat, which is above the settee in front of the stairs.</p>
+          <p>The log burner is laid ready should you want to use the fire as soon as you arrive and wood and kindling is provided in the baskets by the fire. If more is needed both wood and kindling can be found at local petrol stations, including the Esso garage in Haltwhistle.</p>
+          <div class="mt-4 bg-yellow-50 p-4 rounded-lg">
+            <h4 class="font-semibold mb-2">Important Safety Notes:</h4>
+            <ul class="list-disc pl-4 space-y-2">
+              <li>Keep the wood burner door closed for efficiency and safety</li>
+              <li>Don't place wood or anything else on either side of the fire</li>
+              <li>No need to clear out ash during your stay</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Local Walks -->
+      <div class="mt-16">
+        <h2 class="text-4xl font-serif mb-8">Local Walks</h2>
+        <div class="space-y-8">
+          <div class="bg-white p-8 rounded-lg shadow-sm">
+            <h3 class="text-2xl font-serif mb-4">Lambley Viaduct</h3>
+            <p class="text-gray-700 mb-4">
+              A must-see while staying at the Old Cottage. Start by going up the hill and turn left at the sign posted path at the top of the hill. Follow the path down and cross the old railway line.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-lg shadow-sm">
+            <h3 class="text-2xl font-serif mb-4">The South Tyne Trail</h3>
+            <p class="text-gray-700 mb-4">
+              Walking north: From the four-way signpost below the Lambley Viaduct turn right to climb up onto the viaduct, then follow the old railway line as far as you want.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Local Services -->
+      <div class="mt-16">
+        <h2 class="text-4xl font-serif mb-8">Local Services</h2>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="bg-white p-8 rounded-lg shadow-sm">
+            <h3 class="text-2xl font-serif mb-6">Medical Services</h3>
+            <ul class="space-y-4">
+              <li>
+                <strong class="block">Local Doctor</strong>
+                <p>Haltwhistle Medical Group<br/>01434320077</p>
+              </li>
+              <li>
+                <strong class="block">Local Dentist</strong>
+                <p>Haltwhistle Dental Health<br/>01434322300</p>
+              </li>
+              <li>
+                <strong class="block">Emergency A&E</strong>
+                <p>Cumberland Infirmary, Carlisle</p>
+              </li>
+            </ul>
+          </div>
+
+          <div class="bg-white p-8 rounded-lg shadow-sm">
+            <h3 class="text-2xl font-serif mb-6">Local Transport</h3>
+            <ul class="space-y-4">
+              <li>
+                <strong class="block">Local Taxi</strong>
+                <p>Sproul Taxis: 07712321064</p>
+              </li>
+              <li>
+                <strong class="block">Bus Service</strong>
+                <p>Bus 681 from Lambley to Haltwhistle or Alston (3 or 4 times a day)</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Health and Safety -->
+      <div class="bg-white p-8 rounded-lg shadow-sm mt-16">
+        <h2 class="text-3xl font-serif mb-6">Health & Safety</h2>
+        <ul class="space-y-4 text-gray-700">
+          <li>• No smoking or candles in the house</li>
+          <li>• Fire exits via front and back doors (thumb turn locks)</li>
+          <li>• Torches provided in bedside units</li>
+          <li>• Fire blanket in kitchen</li>
+          <li>• First aid kit in top cupboard left of cooker</li>
+          <li>• Defibrillator at village hall (2 minutes away)</li>
+        </ul>
+      </div>
+    </div>
+  </main>
+</Layout>
