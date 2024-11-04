@@ -1,6 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
+const apiKey = import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY;
 ---
+
 
 <Layout title="The Old Cottage - Lambley">
   <main class="bg-cottage-100">
@@ -303,11 +305,15 @@ import Layout from '../layouts/Layout.astro';
 			
 			<!-- Image -->
 			<div class="h-[600px]">
-			  <img 
-				src="Lounge.jpg" 
-				alt="The Old Cottage"
-				class="w-full h-full object-cover rounded-lg"
-			  />
+				<iframe
+				width="600"
+				height="100%"
+				style="border:0"
+				loading="lazy"
+				allowfullscreen
+				referrerpolicy="no-referrer-when-downgrade"
+				src={`https://www.google.com/maps/embed/v1/place?key=${import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY}&q=Lambley, Northumberland&zoom=13`}>
+			</iframe>
 			</div>
 		  </div>
 		</div>
