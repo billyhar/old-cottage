@@ -1,9 +1,28 @@
 ---
 import Layout from '../layouts/Layout.astro';
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "LodgingBusiness",
+  "name": "The Old Cottage",
+  "description": "A centuries old retreat in the North Pennines Area of Outstanding Natural Beauty",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Lambley",
+    "addressRegion": "Northumberland",
+    "addressCountry": "UK"
+  },
+  "amenityFeature": [
+    {"@type": "LocationFeatureSpecification", "name": "Dog Friendly"},
+    {"@type": "LocationFeatureSpecification", "name": "Wifi"},
+    {"@type": "LocationFeatureSpecification", "name": "Woodburning Stove"},
+    {"@type": "LocationFeatureSpecification", "name": "Secluded Patio"}
+  ]
+};
 ---
 
 
-<Layout title="The Old Cottage - Lambley">
+<Layout title="The Old Cottage - Lambley | Holiday Cottage in Northumberland">
+	<script type="application/ld+json" set:html={JSON.stringify(schema)} />
   <main class="bg-cottage-100">
     <!-- Hero Section - Full Height -->
     <div class="relative h-screen">
@@ -31,7 +50,7 @@ import Layout from '../layouts/Layout.astro';
 	  <div class="prose prose-lg">
 		<h2 class="text-4xl font-serif mb-12">Welcome to The Old Cottage</h2>
 		<p class="text-xl text-gray-700 mb-6 leading-relaxed">
-		  Situated in the heart of the North Pennines, an Area of Outstanding Natural Beauty, this delightful hide-away promises an unforgettable stay.
+			Situated in Northumberland, in the heart of the North Pennines and in an Area of Outstanding Natural Beauty, this delightful hide-away promises an unforgettable stay.
 		</p>
 		<p class="text-xl text-gray-700 leading-relaxed">
 		  Don't miss the dramatic Lambley viaduct, which is only a five minute walk away.
@@ -95,6 +114,20 @@ import Layout from '../layouts/Layout.astro';
 			<div>
 			  <h4 class="font-semibold text-lg">Children welcome</h4>
 			  <p class="text-gray-700">Highchair, travel cot and stair gates available</p>
+			</div>
+		  </li>
+		  <li class="flex items-start gap-4">
+			<svg fill="#000000" class="w-6 h-6" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <g> <path d="M495.32,478.495H367.202c-2.417-31.603-25.234-57.571-55.283-64.737V250.348c0-18.395,14.965-33.36,33.36-33.36 c18.395,0,33.36,14.965,33.36,33.36c0,9.212,7.468,16.68,16.68,16.68s16.68-7.468,16.68-16.68c0-18.395,14.965-33.36,33.36-33.36 c18.395,0,32.804,14.654,32.804,33.36c0,9.212,7.468,16.68,16.68,16.68s16.68-7.468,16.68-16.68 c0-115.86-89.378-207.865-199.606-216.209V16.825c0-9.212-7.468-16.68-16.68-16.68s-16.68,7.468-16.68,16.68v17.312 C166.448,42.663,77.841,136.378,77.841,250.348c0,9.212,7.468,16.68,16.68,16.68s16.68-7.468,16.68-16.68 c0-18.395,15.215-33.36,33.916-33.36c18.395,0,33.36,14.965,33.36,33.36c0,9.212,7.468,16.68,16.68,16.68s16.68-7.468,16.68-16.68 c0-18.395,14.965-33.36,33.36-33.36c18.395,0,33.472,14.965,33.472,33.36v163.37c-30.131,7.11-53.136,33.115-55.56,64.776h-32.622 l-49.852-50.113l49.78-50.041h26.425c9.212,0,16.68-7.468,16.68-16.68s-7.468-16.569-16.68-16.569c-8.661,0-191.212,0-200.162,0 c-9.212,0-16.68,7.357-16.68,16.569s7.468,16.68,16.68,16.68h27.121l49.78,50.041l-49.853,50.113H17.154 c-9.212,0-16.68,7.468-16.68,16.68s7.468,16.68,16.68,16.68c24.057,0,465.264,0,478.166,0c9.212,0,16.68-7.468,16.68-16.68 S504.532,478.495,495.32,478.495z M467.017,187.246c-6.866-2.37-14.156-3.617-21.655-3.617c-13.712,0-26.468,4.162-37.08,11.284 c-5.269-38.422-16.96-79.517-37.655-111.73C415.072,103.428,450.078,140.997,467.017,187.246z M311.92,71.019 c35.95,17.781,55.308,78.954,61.921,119.044c-8.664-4.121-18.346-6.436-28.561-6.436c-12.149,0-23.538,3.279-33.36,8.976V71.019z M182.198,194.911c-10.612-7.121-23.368-11.284-37.08-11.284c-8.009,0-15.693,1.401-22.823,3.96 c17.076-46.623,52.609-84.464,97.738-104.689C199.187,115.208,187.464,156.5,182.198,194.911z M278.671,192.604 c-9.822-5.696-21.323-8.976-33.472-8.976c-10.215,0-19.897,2.314-28.561,6.435c6.602-40.023,26.1-101.272,62.033-119.044V192.604z M90.857,378.341h52.504l-26.251,26.389L90.857,378.341z M90.786,478.495l26.324-26.461l26.322,26.461H90.786z M256.634,478.493 c2.704-18.835,18.95-33.359,38.523-33.359c0.024,0,0.049,0.001,0.073,0.001c0.003,0,0.007,0,0.01,0c0.001,0,0.002,0,0.003,0 c19.535,0.043,35.737,14.55,38.439,33.358H256.634z"></path> </g> </g> </g></svg>
+			<div>
+			  <h4 class="font-semibold text-lg">Secluded patio</h4>
+			  <p class="text-gray-700">With fire pit and valley view'</p>
+			</div>
+		  </li>
+		  <li class="flex items-start gap-4">
+			<svg fill="#000000" viewBox="0 0 24 24" class="w-6 h-6" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M18.184,11.019c-.043-.253-1.237-7.419-1.2-7.184A1,1,0,0,0,16,3H12a1,1,0,0,0,0,2h3.153l.586,3.517L9.566,12.505a5.106,5.106,0,1,0,1.081,1.682l5.45-3.521.113.679a5,5,0,1,0,1.974-.326ZM6,19a3,3,0,0,1,0-6,2.967,2.967,0,0,1,1.821.633L5.458,15.16a1,1,0,1,0,1.084,1.68l2.37-1.531A2.972,2.972,0,0,1,9,16,3,3,0,0,1,6,19Zm12,0a2.99,2.99,0,0,1-1.449-5.611l.463,2.776a1,1,0,1,0,1.972-.33l-.463-2.782A3,3,0,0,1,18,19ZM8.707,6.293l2,2A1,1,0,1,1,9.293,9.707L7.586,8H6A1,1,0,0,1,6,6H8A1,1,0,0,1,8.707,6.293Z"></path></g></svg>
+			<div>
+			  <h4 class="font-semibold text-lg">Secure bike storage</h4>
+			  <p class="text-gray-700">With fire pit and valley view'</p>
 			</div>
 		  </li>
 		</ul>
@@ -234,49 +267,39 @@ import Layout from '../layouts/Layout.astro';
       </div>
     </div>
 
-    <!-- Local Services with Visual Design -->
-    <!-- <div class="bg-stone-50 py-24">
-      <div class="max-w-7xl mx-auto px-4">
-        <h2 class="text-4xl font-serif mb-12">Local Services & Amenities</h2>
-        <div class="grid md:grid-cols-2 gap-16">
-          <div class="space-y-4 divide-y divide-gray-200">
-            <h3 class="text-2xl font-serif mb-6">Medical Services</h3>
-            <ul class="space-y-6">
-              <li>
-                <strong class="block text-lg mb-1 mt-8">Doctor</strong>
-                <p>Haltwhistle Medical Group<br>01434320077</p>
-              </li>
-              <li>
-                <strong class="block text-lg mb-1">Dentist</strong>
-                <p>Haltwhistle Dental Health<br>01434322300</p>
-              </li>
-              <li>
-                <strong class="block text-lg mb-1">A&E</strong>
-                <p>Cumberland Infirmary, Carlisle</p>
-              </li>
-            </ul>
-          </div>
-          <div class="space-y-4 divide-y divide-gray-200">
-            <h3 class="text-2xl font-serif mb-6">Transport & Essentials</h3>
-            <ul class="space-y-6">
-              <li>
-                <strong class="block text-lg mb-1 mt-8">Taxi</strong>
-                <p>Sproul Taxis: 07712321064</p>
-              </li>
-              <li>
-                <strong class="block text-lg mb-1">Bus Service</strong>
-                <p>681 service to Haltwhistle/Alston</p>
-              </li>
-              <li>
-                <strong class="block text-lg mb-1">Shopping</strong>
-                <p>Supermarket in Haltwhistle<br>All major supermarkets in Hexham</p>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-	 -->
+<!-- Add this after the Welcome Section, around line 27 -->
+<!-- Testimonials Section -->
+<div class="max-w-7xl mx-auto px-4 py-24">
+	<h2 class="text-4xl font-serif mb-12 text-center">From our visitor book</h2>
+	<div class="grid md:grid-cols-2 gap-8">
+	  <!-- Testimonial 1 -->
+	  <div class="bg-white p-8 rounded-lg shadow-sm">
+		<p class="text-gray-600 mb-4 italic">
+		  A beautiful, comfortable well equipped cottage. Loved the logburner! Good location for touring from - from as near as Haltwhistle to as far as Lindisfarne. Wallace Arms a lovely friendly pub as per your welcome pack.
+		</p>
+		<p class="text-gray-600 italic">
+		  We really enjoyed our stay - so relaxing & peaceful. Would definitely recommend you.
+		</p>
+	  </div>
+  
+	  <!-- Testimonial 2 -->
+	  <div class="bg-white p-8 rounded-lg shadow-sm">
+		<p class="text-gray-600 mb-4 italic">
+		  A warm and cozy welcome on arrival in stormy weather. The tranquility and setting is food for the soul, with wonderful walks from the door (followed by a nap in front of the log burner!).
+		</p>
+		<p class="text-gray-600 italic">
+		  The Northumbrian landscape is varied and breath taking, with Hadrian's Wall a must see. The autumn colours have added extra inspiration and we are leaving with the knowledge there is so much more to enjoy in this area.
+		</p>
+	  </div>
+  
+	  <!-- Testimonial 3 -->
+	  <div class="bg-white p-8 rounded-lg shadow-sm md:col-span-2 max-w-2xl mx-auto">
+		<p class="text-gray-600 mb-4 italic">
+		  We have had a fantastic time. Beautiful walks and so peaceful. The cottage is lovely and cosy definitely will come again. There is so much to see and do all in a short drive from the cottage.
+		</p>
+	  </div>
+	</div>
+  </div>
 	
 	 <section class="bg-slate-900" id="contact">
 		<div class="max-w-7xl mx-auto px-4 py-16">
@@ -285,6 +308,7 @@ import Layout from '../layouts/Layout.astro';
 			<div>
 				<h2 class="text-4xl text-white font-serif mb-8">Contact Us</h2>
 				<p class="mb-8 text-gray-300">Got a question about your stay? Want to check availability? Get in touch and we'll get back to you as soon as possible.</p>
+
 				<form id="contactForm" class="space-y-6" action="https://formspree.io/f/mqakpvwr" method="POST">
 				  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
 					<div>
@@ -310,22 +334,52 @@ import Layout from '../layouts/Layout.astro';
 					  <input type="date" name="checkOut" id="checkOut" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg w-full p-2.5" required>
 					</div>
 				  </div>
-				  <div>
-					<label for="guests" class="block mb-2 text-sm font-medium text-gray-200">Number of guests</label>
-					<select name="guests" id="guests" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg w-full p-2.5" required>
-					  <option value="">Select number of guests</option>
-					  <option value="1">1 guest</option>
-					  <option value="2">2 guests</option>
-					  <option value="3">3 guests</option>
-					  <option value="4">4 guests</option>
-					</select>
+				  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+					<div>
+					  <label for="guests" class="block mb-2 text-sm font-medium text-gray-200">Number of adults</label>
+					  <select name="guests" id="guests" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg w-full p-2.5" required>
+						<option value="">Select number of adults</option>
+						<option value="1">1 adult</option>
+						<option value="2">2 adults</option>
+						<option value="3">3 adults</option>
+						<option value="4">4 adults</option>
+					  </select>
+					</div>
+					<div>
+					  <label for="children" class="block mb-2 text-sm font-medium text-gray-200">Children (2-17 years)</label>
+					  <select name="children" id="children" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg w-full p-2.5">
+						<option value="0">No children</option>
+						<option value="1">1 child</option>
+						<option value="2">2 children</option>
+						<option value="3">3 children</option>
+					  </select>
+					</div>
+				  </div>
+				  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+					<div>
+					  <label for="infants" class="block mb-2 text-sm font-medium text-gray-200">Infants (0-2 years)</label>
+					  <select name="infants" id="infants" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg w-full p-2.5">
+						<option value="0">No infants</option>
+						<option value="1">1 infant</option>
+						<option value="2">2 infants</option>
+					  </select>
+					</div>
+					<div>
+					  <label for="dogs" class="block mb-2 text-sm font-medium text-gray-200">Dogs</label>
+					  <select name="dogs" id="dogs" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg w-full p-2.5">
+						<option value="0">No dogs</option>
+						<option value="1">1 dog</option>
+						<option value="2">2 dogs</option>
+					  </select>
+					</div>
 				  </div>
 				  <div>
 					<label for="message" class="block mb-2 text-sm font-medium text-gray-200">Additional information</label>
 					<textarea name="message" id="message" rows="4" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg w-full p-2.5" placeholder="Any special requirements or questions..."></textarea>
 				  </div>
-				  <button type="submit" class="py-3 px-5 text-sm font-medium text-white rounded-lg bg-yellow-700 hover:bg-yellow-800 transition-colors">Inquire about availability</button>
+				  <button type="submit" class="py-3 px-5 text-sm font-medium text-white rounded-lg bg-yellow-700 hover:bg-yellow-800 transition-colors">Contact us to book</button>
 				</form>
+				
 				<div id="successMessage" class="hidden mt-4 p-4 rounded-lg bg-green-100 text-green-700">
 				  Thank you for your enquiry. We'll get back to you as soon as possible!
 				</div>

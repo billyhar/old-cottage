@@ -1,9 +1,10 @@
 ---
 interface Props {
   title: string;
+  noIndex?: boolean;
 }
 
-const { title } = Astro.props;
+const { title, noIndex } = Astro.props;
 ---
 
 <!doctype html>
@@ -26,6 +27,9 @@ const { title } = Astro.props;
     <meta property="og:image" content="OG.jpg" /> <!-- Replace with your actual domain and preferred image -->
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
+    <meta name="description" content="Experience a peaceful retreat in our historic cottage in Lambley, Northumberland. Features include woodburning stove, dog-friendly accommodation, and stunning views of the North Pennines AONB." />
+<meta name="keywords" content="holiday cottage, Northumberland, Lambley, dog friendly, North Pennines, AONB, woodburning stove" />
+  
 
     
     
@@ -36,6 +40,7 @@ const { title } = Astro.props;
     <meta name="twitter:image" content="OG.jpg" /> <!-- Replace with your actual domain and preferred image -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>{title}</title>
+
   </head>
   <body>
     <nav class="fixed w-full z-50 bg-transparent">
