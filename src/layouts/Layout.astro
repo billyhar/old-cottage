@@ -41,9 +41,22 @@ const { title, noIndex } = Astro.props;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>{title}</title>
 
+    <script>
+      document.addEventListener('scroll', () => {
+        const nav = document.querySelector('nav');
+        if (window.scrollY > 0) {
+          nav.classList.add('bg-slate-900');
+          nav.classList.remove('bg-transparent');
+        } else {
+          nav.classList.add('bg-transparent');
+          nav.classList.remove('bg-slate-900');
+        }
+      });
+    </script>
+
   </head>
   <body>
-    <nav class="fixed w-full z-50 bg-transparent">
+    <nav class="fixed w-full z-50 bg-transparent transition-colors duration-300">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between items-center h-24">
           <div class="flex-shrink-0">
