@@ -1,0 +1,41 @@
+heroTitle: "The Old Cottage"
+heroSubtitle: "A centuries old retreat in the North Pennines Area of Outstanding Natural Beauty"
+
+welcome:
+  title: "Welcome to The Old Cottage"
+  content: |
+    Situated in Northumberland, in the heart of the North Pennines and in an Area of Outstanding Natural Beauty, this delightful hide-away promises an unforgettable stay.
+    
+    Don't miss the dramatic Lambley viaduct, which is only a five minute walk away.
+
+amenities:
+  - title: "Bedrooms"
+    description: "2 comfortable bedrooms, one double and one twin"
+  - title: "Bathrooms"
+    description: "2 bathrooms including ensuite"
+  - title: "Kitchen/Dining Room"
+    description: "Electric Cooker, Microwave, Fridge/Freezer, Dishwasher"
+  - title: "Utility Room"
+    description: "Washing machine & tumble dryer"
+  - title: "Wifi"
+    description: "Wifi and TV available"
+  - title: "Dog friendly"
+    description: "Dog bed and dog treats provided"
+  - title: "Woodburning stove"
+    description: "Logs and kindling provided"
+  - title: "Children welcome"
+    description: "Highchair, travel cot and stair gates available"
+  - title: "Secluded patio"
+    description: "With fire pit and valley view"
+  - title: "Secure bike storage"
+    description: "Just ask for the key"
+
+testimonials:
+  - quote: "A beautiful, comfortable well equipped cottage. Loved the logburner! Good location for touring from - from as near as Haltwhistle to as far as Lindisfarne. Wallace Arms a lovely friendly pub as per your welcome pack. We really enjoyed our stay - so relaxing & peaceful. Would definitely recommend you."
+  - quote: "A warm and cozy welcome on arrival in stormy weather. The tranquility and setting is food for the soul, with wonderful walks from the door (followed by a nap in front of the log burner!). The Northumbrian landscape is varied and breath taking, with Hadrian's Wall a must see. The autumn colours have added extra inspiration and we are leaving with the knowledge there is so much more to enjoy in this area."
+  - quote: "We have had a fantastic time. Beautiful walks and so peaceful. The cottage is lovely and cosy definitely will come again. There is so much to see and do all in a short drive from the cottage."
+
+pricing:
+  twoNightPrice: "£245"
+  weekPrice: "£475"
+  description: "We accept bookings for 2 or more nights, starting on any day of the week. Prices vary throughout the year but in the low season start from:" 

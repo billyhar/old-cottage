@@ -1,10 +1,15 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { parse } from 'yaml';
+import { readFile } from 'node:fs/promises';
+
+const homeContent = parse(await readFile('src/content/home.yml', 'utf8'));
+
 const schema = {
   "@context": "https://schema.org",
   "@type": "LodgingBusiness",
   "name": "The Old Cottage",
-  "description": "A centuries old retreat in the North Pennines Area of Outstanding Natural Beauty",
+  "description": homeContent.heroSubtitle,
   "address": {
     "@type": "PostalAddress",
     "addressLocality": "Lambley",
@@ -64,7 +69,7 @@ const schema = {
 			<svg viewBox="0 0 24 24" fill="none" class="h-6 w-6" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M2 6C2 5.44772 1.55228 5 1 5C0.447715 5 0 5.44772 0 6V18C0 18.5523 0.447715 19 1 19C1.55228 19 2 18.5523 2 18V16H22V18C22 18.5523 22.4477 19 23 19C23.5523 19 24 18.5523 24 18V10C24 7.79086 22.2091 6 20 6H13C11.8954 6 11 6.89543 11 8V14H2V6ZM22 10V14H13V8H20C21.1046 8 22 8.89543 22 10Z" fill="#0F0F0F"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M6.5 13C8.433 13 10 11.433 10 9.5C10 7.567 8.433 6 6.5 6C4.567 6 3 7.567 3 9.5C3 11.433 4.567 13 6.5 13ZM6.5 11.0799C5.62742 11.0799 4.92006 10.3726 4.92006 9.5C4.92006 8.62742 5.62742 7.92006 6.5 7.92006C7.37258 7.92006 8.07994 8.62742 8.07994 9.5C8.07994 10.3726 7.37258 11.0799 6.5 11.0799Z" fill="#0F0F0F"></path> </g></svg>
 			<div>
 			  <h4 class="font-semibold text-lg">Bedrooms</h4>
-			  <p class="text-gray-700">2 comfortable double bedrooms</p>
+			  <p class="text-gray-700">2 comfortable bedrooms, one double and one twin</p>
 			</div>
 		  </li>
 		  <li class="flex items-start gap-4">
@@ -117,7 +122,7 @@ const schema = {
 			</div>
 		  </li>
 		  <li class="flex items-start gap-4">
-			<svg fill="#000000" class="w-6 h-6" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <g> <path d="M495.32,478.495H367.202c-2.417-31.603-25.234-57.571-55.283-64.737V250.348c0-18.395,14.965-33.36,33.36-33.36 c18.395,0,33.36,14.965,33.36,33.36c0,9.212,7.468,16.68,16.68,16.68s16.68-7.468,16.68-16.68c0-18.395,14.965-33.36,33.36-33.36 c18.395,0,32.804,14.654,32.804,33.36c0,9.212,7.468,16.68,16.68,16.68s16.68-7.468,16.68-16.68 c0-115.86-89.378-207.865-199.606-216.209V16.825c0-9.212-7.468-16.68-16.68-16.68s-16.68,7.468-16.68,16.68v17.312 C166.448,42.663,77.841,136.378,77.841,250.348c0,9.212,7.468,16.68,16.68,16.68s16.68-7.468,16.68-16.68 c0-18.395,15.215-33.36,33.916-33.36c18.395,0,33.36,14.965,33.36,33.36c0,9.212,7.468,16.68,16.68,16.68s16.68-7.468,16.68-16.68 c0-18.395,14.965-33.36,33.36-33.36c18.395,0,33.472,14.965,33.472,33.36v163.37c-30.131,7.11-53.136,33.115-55.56,64.776h-32.622 l-49.852-50.113l49.78-50.041h26.425c9.212,0,16.68-7.468,16.68-16.68s-7.468-16.569-16.68-16.569c-8.661,0-191.212,0-200.162,0 c-9.212,0-16.68,7.357-16.68,16.569s7.468,16.68,16.68,16.68h27.121l49.78,50.041l-49.853,50.113H17.154 c-9.212,0-16.68,7.468-16.68,16.68s7.468,16.68,16.68,16.68c24.057,0,465.264,0,478.166,0c9.212,0,16.68-7.468,16.68-16.68 S504.532,478.495,495.32,478.495z M467.017,187.246c-6.866-2.37-14.156-3.617-21.655-3.617c-13.712,0-26.468,4.162-37.08,11.284 c-5.269-38.422-16.96-79.517-37.655-111.73C415.072,103.428,450.078,140.997,467.017,187.246z M311.92,71.019 c35.95,17.781,55.308,78.954,61.921,119.044c-8.664-4.121-18.346-6.436-28.561-6.436c-12.149,0-23.538,3.279-33.36,8.976V71.019z M182.198,194.911c-10.612-7.121-23.368-11.284-37.08-11.284c-8.009,0-15.693,1.401-22.823,3.96 c17.076-46.623,52.609-84.464,97.738-104.689C199.187,115.208,187.464,156.5,182.198,194.911z M278.671,192.604 c-9.822-5.696-21.323-8.976-33.472-8.976c-10.215,0-19.897,2.314-28.561,6.435c6.602-40.023,26.1-101.272,62.033-119.044V192.604z M90.857,378.341h52.504l-26.251,26.389L90.857,378.341z M90.786,478.495l26.324-26.461l26.322,26.461H90.786z M256.634,478.493 c2.704-18.835,18.95-33.359,38.523-33.359c0.024,0,0.049,0.001,0.073,0.001c0.003,0,0.007,0,0.01,0c0.001,0,0.002,0,0.003,0 c19.535,0.043,35.737,14.55,38.439,33.358H256.634z"></path> </g> </g> </g></svg>
+			<svg fill="#000000" class="w-6 h-6" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <g> <path d="M495.32,478.495H367.202c-2.417-31.603-25.234-57.571-55.283-64.737V250.348c0-18.395,14.965-33.36,33.36-33.36 c18.395,0,33.36,14.965,33.36,33.36c0,9.212,7.468,16.68,16.68,16.68s16.68-7.468,16.68-16.68c0-18.395,14.965-33.36,33.36-33.36 c18.395,0,32.804,14.654,32.804,33.36c0,9.212,7.468,16.68,16.68,16.68s16.68-7.468,16.68-16.68 c0-115.86-89.378-207.865-199.606-216.209V16.825c0-9.212-7.468-16.68-16.68-16.68s-16.68,7.468-16.68,16.68v17.312 C166.448,42.663,77.841,136.378,77.841,250.348c0,9.212,7.468,16.68,16.68,16.68s16.68-7.468,16.68-16.68 c0-18.395,15.215-33.36,33.916-33.36c18.395,0,33.36,14.965,33.36,33.36c0,9.212,7.468,16.68,16.68,16.68s16.68-7.468,16.68-16.68 c0-18.395,14.965-33.36,33.36-33.36c18.395,0,33.472,14.965,33.472,33.36v163.37c-30.131,7.11-53.136,33.115-55.56,64.776h-32.622 l-49.852-50.113l49.78-50.041h26.425c9.212,0,16.68-7.468,16.68-16.68s-7.468-16.569-16.68-16.569c-8.661,0-191.212,0-200.162,0 c-9.212,0-16.68,7.357-16.68,16.569s7.468,16.68,16.68,16.68h27.121l49.78,50.041l-49.853,50.113H17.154 c-9.212,0-16.68,7.468-16.68,16.68s7.468,16.68,16.68,16.68c24.057,0,465.264,0,478.166,0c9.212,0,16.68-7.468,16.68-16.68 S504.532,478.495,495.32,478.495z M467.017,187.246c-6.866-2.37-14.156-3.617-21.655-3.617c-13.712,0-26.468,4.162-37.08,11.284 c-5.269-38.422-16.96-79.517-37.655-111.73C415.072,103.428,450.078,140.997,467.017,187.246z M311.92,71.019 c35.95,17.781,55.308,78.954,61.921,119.044c-8.664-4.121-18.346-6.436-28.561-6.436c-12.149,0-23.538,3.279-33.36,8.976V71.019z M182.198,194.911c-10.612-7.121-23.368-11.284-37.08-11.284c-8.009,0-15.693,1.401-22.823,3.96 c17.076-46.623,52.609-84.464,97.738-104.689C199.187,115.208,187.464,156.5,182.198,194.911z M278.671,192.604 c-9.822-5.696-21.323-8.976-33.472-8.976c-10.215,0-19.897,2.314-28.561,6.435c6.602-40.023,26.1-101.272,62.033-119.044V192.604z M90.857,378.341h52.504l-26.251,26.389L90.857,378.341z M90.786,478.495l26.324-26.461l26.322,26.461H90.786z M256.634,478.493 c2.704-18.835,18.95-33.359,38.523-33.359c0.024,0,0.049,0,0.073,0c0.003,0,0.007,0,0.01,0c0.001,0,0.002,0,0.003,0 c19.535,0.043,35.737,14.55,38.439,33.358H256.634z"></path> </g> </g> </g></svg>
 			<div>
 			  <h4 class="font-semibold text-lg">Secluded patio</h4>
 			  <p class="text-gray-700">With fire pit and valley view</p>
@@ -189,7 +194,7 @@ const schema = {
         <div class="order-2 md:order-1">
           <h2 class="text-4xl font-serif mb-8">2 Bedrooms</h2>
           <div class="prose prose-lg text-slate-600">
-            <p>The Old Cottage features two inviting double bedrooms on the first floor, each offering picturesque views of the village church. The master bedroom includes an ensuite shower room, providing added privacy and convenience. The second bedroom shares the same delightful views, ensuring a serene start to each day. </p>
+            <p>The Old Cottage features two bedrooms on the first floor, one double and one twin, each offering picturesque views of the village church. The master bedroom includes an ensuite shower room, providing added privacy and convenience. The second bedroom shares the same delightful views, ensuring a serene start to each day. </p>
           </div>
         </div>
         <div class="order-1 md:order-2 h-[600px]">
@@ -254,7 +259,7 @@ const schema = {
           <div class="prose prose-lg text-gray-600 text-light">
             <p>Lambley is a charming village with a lot to offer. Begin your day with a visit to the beautiful village church, located just across the road from The Old Cottage. For outdoor enthusiasts, the North Pennines is a paradise for hiking, cycling, and birdwatching. Explore the numerous trails that wind through the breathtaking landscape, or take a stroll along the River South Tyne.</p>
 			<br>
-			<p>A short drive away, you’ll find the bustling market town of Hexham, known for its historic abbey, charming shops, and vibrant weekly market. For a taste of local history, visit Hadrian’s Wall, a UNESCO World Heritage site, and marvel at the ancient Roman fortifications. Whether you’re seeking adventure or relaxation, The Old Cottage in Lambley offers the perfect base for your next holiday. Book your stay today and experience the beauty and tranquillity of this enchanting region.</p>
+			<p>A short drive away, you'll find the bustling market town of Hexham, known for its historic abbey, charming shops, and vibrant weekly market. For a taste of local history, visit Hadrian's Wall, a UNESCO World Heritage site, and marvel at the ancient Roman fortifications. Whether you're seeking adventure or relaxation, The Old Cottage in Lambley offers the perfect base for your next holiday. Book your stay today and experience the beauty and tranquillity of this enchanting region.</p>
 		</div>
         </div>
         <div class="h-[600px]">
