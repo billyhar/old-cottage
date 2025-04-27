@@ -2,6 +2,9 @@ backend:
   name: git-gateway
   branch: main
 
+local_backend: true # Enable local development
+publish_mode: editorial_workflow # Adds draft/review workflow
+
 media_folder: "public/images"
 public_folder: "/images"
 
@@ -10,32 +13,34 @@ collections:
     label: "Page Content"
     files:
       - name: "home"
-        label: "Home Page"
+        label: "Home Page Content"
         file: "src/content/home.yml"
         fields:
-          - {label: "Hero Title", name: "heroTitle", widget: "string"}
-          - {label: "Hero Subtitle", name: "heroSubtitle", widget: "string"}
+          - {label: "Hero Title", name: "heroTitle", widget: "string", hint: "The main title shown at the top of the page"}
+          - {label: "Hero Subtitle", name: "heroSubtitle", widget: "string", hint: "The subtitle shown below the main title"}
           - label: "Welcome Section"
             name: "welcome"
             widget: "object"
             fields:
-              - {label: "Title", name: "title", widget: "string"}
-              - {label: "Content", name: "content", widget: "markdown"}
+              - {label: "Title", name: "title", widget: "string", hint: "The welcome section heading"}
+              - {label: "Content", name: "content", widget: "markdown", hint: "The main welcome text - you can use basic formatting like bold and bullet points"}
           - label: "Amenities"
             name: "amenities"
             widget: "list"
+            hint: "List of features and facilities available at the cottage"
             fields:
-              - {label: "Title", name: "title", widget: "string"}
-              - {label: "Description", name: "description", widget: "string"}
+              - {label: "Title", name: "title", widget: "string", hint: "Name of the amenity (e.g. 'Bedrooms')"}
+              - {label: "Description", name: "description", widget: "string", hint: "Brief description of the amenity"}
           - label: "Testimonials"
             name: "testimonials"
             widget: "list"
+            hint: "Guest reviews and feedback"
             fields:
-              - {label: "Quote", name: "quote", widget: "text"}
+              - {label: "Quote", name: "quote", widget: "text", hint: "The full testimonial text from your guest"}
           - label: "Pricing"
             name: "pricing"
             widget: "object"
             fields:
-              - {label: "Two Night Price", name: "twoNightPrice", widget: "string"}
-              - {label: "Week Price", name: "weekPrice", widget: "string"}
-              - {label: "Description", name: "description", widget: "text"} 
+              - {label: "Two Night Price", name: "twoNightPrice", widget: "string", hint: "Starting price for a two-night stay (e.g. '£245')"}
+              - {label: "Week Price", name: "weekPrice", widget: "string", hint: "Starting price for a week's stay (e.g. '£475')"}
+              - {label: "Description", name: "description", widget: "text", hint: "Additional pricing information or conditions"} 
