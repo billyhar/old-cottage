@@ -7,14 +7,15 @@
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body>
+  <!-- Your main website content goes here -->
+  
   <script>
     if (window.netlifyIdentity) {
       window.netlifyIdentity.on("init", user => {
-        if (user) {
-          // If user is already logged in and we're not in admin, redirect to admin
-          if (window.location.pathname !== "/admin/") {
+        if (!user) {
+          window.netlifyIdentity.on("login", () => {
             window.location.href = "/admin/";
-          }
+          });
         }
       });
     }
