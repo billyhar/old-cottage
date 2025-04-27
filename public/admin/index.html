@@ -4,15 +4,19 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Old Cottage CMS</title>
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body>
   <!-- CMS will mount here -->
   <div id="nc-root"></div>
 
-  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-  <script src="https://unpkg.com/decap-cms@2.10.192/dist/netlify-cms.js"></script>
-
   <script>
+    // Add error handling for CMS loading
+    window.onerror = function(msg, url, lineNo, columnNo, error) {
+      console.error('CMS Error:', msg, error);
+    };
+
+    // Handle Netlify Identity
     if (window.netlifyIdentity) {
       window.netlifyIdentity.on("init", user => {
         if (!user) {
@@ -23,5 +27,8 @@
       });
     }
   </script>
+  
+  <!-- Load Decap CMS -->
+  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
 </body>
 </html> 

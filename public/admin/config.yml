@@ -7,6 +7,9 @@ local_backend: true
 media_folder: "public/images"
 public_folder: "/images"
 
+editor:
+  preview: true
+
 collections:
   - name: "content"
     label: "Page Content"
