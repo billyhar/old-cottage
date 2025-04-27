@@ -1,6 +1,8 @@
 backend:
-  name: git-gateway
-  branch: main
+  name: auth0
+  auth_endpoint: "https://your-tenant.auth0.com/authorize"
+  auth0_domain: "your-tenant.auth0.com"
+  client_id: "your-client-id"
 
 media_folder: "public/images"
 public_folder: "/images"
