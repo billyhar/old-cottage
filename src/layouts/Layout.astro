@@ -76,23 +76,20 @@ const { title, noIndex } = Astro.props;
     <slot />
     <script>
       if (window.netlifyIdentity) {
-        // Handle invitation tokens on any page
-        if (document.location.hash && document.location.hash.includes('#invite_token=')) {
-          const token = document.location.hash.split('=')[1];
-          window.netlifyIdentity.open('signup');
-        }
-
-        window.netlifyIdentity.on("init", user => {
-          if (!user) {
-            window.netlifyIdentity.on("login", () => {
-              window.location.href = "/admin/";
-            });
-          }
+        // Configure the widget to only show login
+        window.netlifyIdentity.setConfig({
+          enableSignup: false
         });
 
-        // After successful signup, redirect to admin
-        window.netlifyIdentity.on("signup", user => {
-          window.location.href = "/admin/";
+        // Handle confirmation tokens
+        if (document.location.hash && document.location.hash.includes('#confirmation_token=')) {
+          const token = document.location.hash.split('=')[1];
+          window.netlifyIdentity.confirm(token, true);
+        }
+
+        // After confirmation or login, redirect to admin
+        window.netlifyIdentity.on('login', () => {
+          window.location.href = '/admin/';
         });
       }
     </script>
