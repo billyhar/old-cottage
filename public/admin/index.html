@@ -21,8 +21,14 @@
       window.netlifyIdentity.on("init", user => {
         if (!user) {
           window.netlifyIdentity.on("login", () => {
-            document.location.href = "/admin/";
+            // Remove the redirect to prevent loops
+            // The CMS will handle the admin panel loading
           });
+        } else {
+          // User is already logged in, make sure we're in the admin path
+          if (window.location.pathname !== "/admin/") {
+            window.location.href = "/admin/";
+          }
         }
       });
     }
