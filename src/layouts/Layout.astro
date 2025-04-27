@@ -84,6 +84,12 @@ const { title, noIndex } = Astro.props;
             });
           }
         });
+
+        // Handle the confirmation token
+        if (document.location.hash.match(/^#confirmation_token=/)) {
+          const token = document.location.hash.split('=')[1];
+          window.netlifyIdentity.confirm(token);
+        }
       }
     </script>
   </body>

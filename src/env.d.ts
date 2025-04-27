@@ -4,5 +4,6 @@
 interface Window {
   netlifyIdentity: {
     on: (event: string, callback: (user?: any) => void) => void;
+    confirm: (token: string) => void;
   }
 }
